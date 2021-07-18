@@ -1,8 +1,6 @@
 # Clickbus - Challange
 
 ###### My attempt to solve https://github.com/RocketBus/quero-ser-clickbus/tree/master/testes/backend-developer challange
-#
-#
 ----
 ###### link: https://athever-clickbus-challange.herokuapp.com/api/places
 ## Add place
@@ -25,5 +23,5 @@ curl -X PUT -H "Content-type: application/json" -d '{
 ```
 ## Delete Place
 ```
-curl -X DELETE 'https://athever-clickbus-challange.herokuapp.com/api/places/60f3ffc6306e2e1bdb52b5c4'
+curl -X DELETE 'https://athever-clickbus-challange.herokuapp.com/api/places/:id'
 ```
