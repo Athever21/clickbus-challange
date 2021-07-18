@@ -4,6 +4,7 @@ import (
 	"clickbus/db"
 	"clickbus/routes"
 	"log"
+	"os"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/joho/godotenv"
@@ -17,5 +18,5 @@ func main() {
 	routes.PlacesRouter(app)
 
 	defer db.CloseDb()
-	log.Fatal(app.Listen(":3000"))
+	log.Fatal(app.Listen(os.Getenv("PORT")))
 }
