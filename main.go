@@ -3,6 +3,7 @@ package main
 import (
 	"clickbus/db"
 	"clickbus/routes"
+	"fmt"
 	"log"
 	"os"
 
@@ -18,5 +19,5 @@ func main() {
 	routes.PlacesRouter(app)
 
 	defer db.CloseDb()
-	log.Fatal(app.Listen(os.Getenv("PORT")))
+	log.Fatal(app.Listen(fmt.Sprintf(":%s", os.Getenv("PORT"))))
 }
